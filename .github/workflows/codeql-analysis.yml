@@ -67,7 +67,7 @@ jobs:
     #   make release
 
     - name: Perform CodeQL Analysis
-      uses: 
+      queries: 
         packs:
           javascript:
             - scope/js-pack1
