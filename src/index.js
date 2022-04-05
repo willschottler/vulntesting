@@ -8,9 +8,7 @@ import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
     <Clock />
-    <MyComponent />
   </React.StrictMode>,
   document.getElementById('root')
 );
