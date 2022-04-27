@@ -1,0 +1,78 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <IncludeBuildOutput>false</IncludeBuildOutput>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+  </PropertyGroup>
+  
+  <PropertyGroup>
+    <AssemblyName>SecurityCodeScan.VS2019</AssemblyName>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <None Remove="Config\Main.yml" />
+    <None Remove="Config\Messages.yml" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <EmbeddedResource Include="Config\Main.yml" />
+    <EmbeddedResource Include="Config\Messages.yml" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="3.3.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="3.8.0" />
+    <PackageReference Include="Microsoft.CodeAnalysis.VisualBasic" Version="3.8.0" />
+    <PackageReference Include="MSBuild.AssemblyVersion" Version="1.3.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="YamlDotNet" Version="11.2.1" />
+    <PackageReference Update="NETStandard.Library" PrivateAssets="all" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Empty.Designer.cs" DesignTime="True" AutoGen="True" DependentUpon="Empty.resx" />
+    <EmbeddedResource Update="Empty.resx" Generator="ResXFileCodeGenerator" LastGenOutput="Empty.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Diagnostic.nuspec">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="tools\install.ps1">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="tools\uninstall.ps1">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <Target Name="CustomAfterBuild" AfterTargets="Build">
+    <GetAssemblyIdentity AssemblyFiles="$(OutDir)\$(AssemblyName).dll">
+      <Output TaskParameter="Assemblies" ItemName="AnalyzerAssemblyInfo" />
+    </GetAssemblyIdentity>
+    <Exec Command="$(SolutionDir)nuget.exe pack Diagnostic.nuspec -NoPackageAnalysis -Version %(AnalyzerAssemblyInfo.Version) -Properties repositoryCommit=$(SourceRevisionId) -OutputDirectory ." WorkingDirectory="$(OutDir)" LogStandardErrorAsError="true" ConsoleToMSBuild="true">
+      <Output TaskParameter="ConsoleOutput" PropertyName="OutputOfExec" />
+    </Exec>
+  </Target>
+
+  <Import Project="..\Roslyn\Compiler\Analyzer.Utilities.projitems" Label="Shared" />
+
+  <Import Project="..\Roslyn\FlowAnalysis\FlowAnalysis.Utilities.projitems" Label="Shared" />
+
+  <Import Project="..\Roslyn\Workspaces\Workspaces.Utilities.projitems" Label="Shared" />
+
+  <ItemGroup>
+    <PackageReference Update="Microsoft.CodeAnalysis" Version="3.8.0" />
+    <PackageReference Update="Microsoft.CodeAnalysis.Common" Version="3.8.0" />
+    <PackageReference Update="Microsoft.CodeAnalysis.Workspaces.Common" Version="3.8.0" />
+  </ItemGroup>
+
+</Project>

@@ -1,125 +1,41 @@
-<link href="https://www.codemaid.net/wp-content/uploads/external/ProjectDescription.css" rel="stylesheet"></link>
- 
-<div id="mainFeatures"><a title="codemaid.net" href="https://www.codemaid.net" target="_blank"><img src="https://www.codemaid.net/wp-content/uploads/2021/11/about.png" alt="codemaid.net" /></a></div>
-<div>For more details, please visit: <a title="codemaid.net" href="https://www.codemaid.net" target="_blank"> https://www.codemaid.net</a></div>
-<p>Currently supports VS2019 and VS2022.</p>
-<p>For Visual Studio 2017, the last supported version is <a href="https://github.com/codecadwallader/codemaid/releases/download/v11.2/CodeMaid.v11.2.231.vsix" target="_blank"> v11.2</a>.</p>
-<p>For Visual Studio 2012/2013/2015, the last supported version is <a href="https://github.com/codecadwallader/codemaid/releases/download/v10.6/CodeMaid.v10.6.144.vsix" target="_blank"> v10.6</a>.</p>
-<p>For Visual Studio 2010, the last supported version is <a href="https://github.com/codecadwallader/codemaid/releases/download/v0.8.1/CodeMaid_v0.8.1.vsix" target="_blank"> v0.8.1</a>.</p>
-<p>For Visual Studio 2005/2008, the last supported version is <a href="https://github.com/codecadwallader/codemaid/releases/download/v0.4.3/CodeMaid_v0.4.3.msi" target="_blank"> v0.4.3</a>.</p>
-<h2>Links</h2>
-Project home, Documentation, News: <a title="codemaid.net" href="https://www.codemaid.net" target="_blank">www.codemaid.net</a> <br />
-Download, Reviews: <a title="Visual Studio Marketplace" href="https://marketplace.visualstudio.com/items?itemName=SteveCadwallader.CodeMaid" target="_blank">Visual Studio Marketplace</a> <br />
+[![Security Code Scan](website/images/logo.png)](https://security-code-scan.github.io)  
+*Vulnerability Patterns Detector for C# and VB.NET* - [Website](https://security-code-scan.github.io)  
 
-Code, Issues: <a title="GitHub" href="https://github.com/codecadwallader/codemaid" target="_blank">GitHub</a> <br />
-Continuous Integration: <a title="AppVeyor" href="https://ci.appveyor.com/project/codecadwallader/codemaid" target="_blank">AppVeyor</a>
-[![Build status](https://ci.appveyor.com/api/projects/status/adpt8279h212ceiv)](https://ci.appveyor.com/project/codecadwallader/codemaid) <br />
+[![Build](https://github.com/security-code-scan/security-code-scan/actions/workflows/ci.yml/badge.svg)](https://github.com/security-code-scan/security-code-scan/actions/workflows/ci.yml)
 
-Twitter @codemaid: <a title="Twitter" href="https://twitter.com/codemaid/" target="_blank">Twitter</a> <br />
-<h2>Features</h2>
-<div id="mainFeatures">
-    <div id="codeClean">
-        <a href="https://www.codemaid.net/documentation/#cleaning" target="_blank"><img src="https://www.codemaid.net/wp-content/themes/codemaid/images/code-cleaning_thumb.png" alt="CodeMaid Cleaning" /></a>
-        <div class="mainFeature">
-            <h3><a href="https://www.codemaid.net/documentation/#cleaning" target="_blank">Code Cleaning</a></h3>
-            <p>Cleanup random white space into a simple standard order. Add unspecified access modifiers. Utilize Visual Studio&rsquo;s built-in formatting capabilities. Remove and sort using statements. And do it all automatically on save or on demand, from an individual  file to the entire solution.</p>
-        </div>
-    </div>
-    <div id="codeDig">
-        <a href="https://www.codemaid.net/documentation/#digging" target="_blank"><img src="https://www.codemaid.net/wp-content/themes/codemaid/images/code-digging_thumb.png" alt="CodeMaid Digging" /></a>
-        <div class="mainFeature">
-            <h3><a href="https://www.codemaid.net/documentation/#digging" target="_blank">Code Digging</a></h3>
-            <p>Visualize and navigate through the contents of your C# and C++ files from a tree view hierarchy. Quickly switch between different sorting methods to get a better overview. Drag and drop to reorganize the code. See McCabe complexity scores and informative  tooltips.</p>
-        </div>
-    </div>
-    <div id="codeReorg">
-        <a href="https://www.codemaid.net/documentation/#reorganizing" target="_blank"><img src="https://www.codemaid.net/wp-content/themes/codemaid/images/code-reorganizing_thumb.png" alt="CodeMaid Reorganizing" /></a>
-        <div class="mainFeature">
-            <h3><a href="https://www.codemaid.net/documentation/#reorganizing" target="_blank">Code Reorganizing</a></h3>
-            <p>Reorganize the layout of members in a C# file to follow Microsoft’s StyleCop convention, or your own preferences. Automatically generate regions to match. Run on demand or automatically during cleanup.</p>
-        </div>
-    </div>
-    <div id="codeFormat">
-        <a href="https://www.codemaid.net/documentation/#formatting" target="_blank"><img src="https://www.codemaid.net/wp-content/themes/codemaid/images/code-formatting_thumb.png" alt="CodeMaid Formatting" /></a>
-        <div class="mainFeature">
-            <h3><a href="https://www.codemaid.net/documentation/#formatting" target="_blank">Comment Formatting</a></h3>
-            <p>Format comments to wrap at a specified column and arrange tags on separate lines. Run on demand or automatically during cleanup.</p>
-        </div>
-    </div>
-</div>
-<div id="subFeatures">
-    <div class="subFeatureSet">
-        <div class="subFeature">
-            <a href="https://www.codemaid.net/documentation/#joining" target="_blank"><img src="https://www.codemaid.net/wp-content/themes/codemaid/images/code-joining_thumb.png" alt="CodeMaid Joining" /></a>
-            <div class="subFeatureText">
-                <h4><a href="https://www.codemaid.net/documentation/#joining" target="_blank">Joining</a></h4>
-                <p>Join two adjacent lines, or a highlighted section of code onto a single line.</p>
-            </div>
-        </div>
-        <div class="subFeature">
-            <a href="https://www.codemaid.net/documentation/#finding" target="_blank"><img src="https://www.codemaid.net/wp-content/themes/codemaid/images/code-finding_thumb.png" alt="CodeMaid Finding" /></a>
-            <div class="subFeatureText">
-                <h4><a href="https://www.codemaid.net/documentation/#finding" target="_blank">Finding</a></h4>
-                <p>Find the current file in the solution explorer window.</p>
-            </div>
-        </div>
-    </div>
-    <div class="subFeatureSet">
-        <div class="subFeature">
-            <a href="https://www.codemaid.net/documentation/#sorting" target="_blank"><img src="https://www.codemaid.net/wp-content/themes/codemaid/images/code-sorting_thumb.png" alt="CodeMaid Sorting" /></a>
-            <div class="subFeatureText">
-                <h4><a href="https://www.codemaid.net/documentation/#sorting" target="_blank">Sorting</a></h4>
-                <p>Sort a highlighted section of code alphabetically.</p>
-            </div>
-        </div>
-        <div class="subFeature">
-            <a href="https://www.codemaid.net/documentation/#collapsing" target="_blank"><img src="https://www.codemaid.net/wp-content/themes/codemaid/images/code-collapsing_thumb.png" alt="CodeMaid Collapsing" /></a>
-            <div class="subFeatureText">
-                <h4><a href="https://www.codemaid.net/documentation/#collapsing" target="_blank">Collapsing</a></h4>
-                <p>Recursively collapse nodes or the entire tree in the solution explorer window.</p>
-            </div>
-        </div>
-    </div>
-    <div class="subFeatureSet">
-        <div class="subFeature">
-            <a href="https://www.codemaid.net/documentation/#progressing" target="_blank"><img src="https://www.codemaid.net/wp-content/themes/codemaid/images/code-progressing_thumb.png" alt="CodeMaid Progressing" /></a>
-            <div class="subFeatureText">
-                <h4><a href="https://www.codemaid.net/documentation/#progressing" target="_blank">Progressing</a></h4>
-                <p>View the overall progress of a build within Visual Studio, or in the Windows taskbar, both with a green/red status indication.</p>
-            </div>
-        </div>
-        <div class="subFeature">
-            <a href="https://www.codemaid.net/documentation/#configuring" target="_blank"><img src="https://www.codemaid.net/wp-content/themes/codemaid/images/code-configuring_thumb.png" alt="CodeMaid Configuring" /></a>
-            <div class="subFeatureText">
-                <h4><a href="https://www.codemaid.net/documentation/#configuring" target="_blank">Configuring</a></h4>
-                <p>Enable, modify or disable many of the aspects of how CodeMaid does its work.</p>
-            </div>
-        </div>
-    </div>
-    <div class="subFeatureSet">
-        <div class="subFeature">
-            <a href="https://www.codemaid.net/documentation/#switching" target="_blank"><img src="https://www.codemaid.net/wp-content/themes/codemaid/images/code-switching_thumb.png" alt="CodeMaid Switching" /></a>
-            <div class="subFeatureText">
-                <h4><a href="https://www.codemaid.net/documentation/#switching" target="_blank">Switching</a></h4>
-                <p>Switch between related files, such as cpp and header files or xaml and code-behind.</p>
-            </div>
-        </div>
-        <div class="subFeature">
-            <a href="https://www.codemaid.net/documentation/#toggling" target="_blank"><img src="https://www.codemaid.net/wp-content/themes/codemaid/images/code-toggling_thumb.png" alt="CodeMaid Toggling" /></a>
-            <div class="subFeatureText">
-                <h4><a href="https://www.codemaid.net/documentation/#toggling" target="_blank">Toggling</a></h4>
-                <p>Toggle read-only state of files without jumping into the windows explorer.</p>
-            </div>
-        </div>
-    </div>
-    <div class="subFeatureSet">
-        <div class="subFeature">
-            <a href="https://www.codemaid.net/documentation/#andmore" target="_blank"><img src="https://www.codemaid.net/wp-content/themes/codemaid/images/code-andmore_thumb.png" alt="CodeMaid and more" /></a>
-            <div class="subFeatureText">
-                <h4><a href="https://www.codemaid.net/documentation/#andmore" target="_blank">and More!</a></h4>
-                <p>Remove regions, close read-only files, etc.</p>
-            </div>
-        </div>
-    </div>
-    <div class="clear" />
-</div>
+### Downloading
+Official releases are available as [nuget package](https://www.nuget.org/packages/SecurityCodeScan.VS2019/), [Visual Studio extension](https://marketplace.visualstudio.com/items?itemName=JaroslavLobacevski.SecurityCodeScanVS2019) and [stand-alone runner](https://www.nuget.org/packages/security-scan/).  
+
+### Building
+```
+git clone https://github.com/security-code-scan/security-code-scan.git
+cd security-code-scan
+```
+Open `SecurityCodeScan.sln` in Visual Studio or build from command line:
+```
+nuget restore SecurityCodeScan.sln
+msbuild SecurityCodeScan.sln
+```
+
+### Contributing
+* All documentation from the [official site](https://security-code-scan.github.io) is open-source and located in the [website](https://github.com/security-code-scan/security-code-scan/tree/vs2019/website) folder. Feel free to modify the markdown files and contribute to it.
+* You may customize the behavior of Security Code Scan by creating a local configuration file as described in [ExternalConfigurationFiles section](https://security-code-scan.github.io/#ExternalConfigurationFiles). It is easy to add new vulnerable functions (sinks) that should trigger a warning, define untrusted sources, etc. Once you think you have working configuration file you are welcome to contribute your changes to the main built-in configuration file. Ideally your Pull Request comes with tests that cover the changes.
+* Review the list of available [issues.](https://github.com/security-code-scan/security-code-scan/issues) The general understanding of Roslyn might be handy:
+  - [Use Roslyn to Write a Live Code Analyzer for Your API](https://docs.microsoft.com/en-us/archive/msdn-magazine/2014/special-issue/csharp-and-visual-basic-use-roslyn-to-write-a-live-code-analyzer-for-your-api)
+  - [Getting Started with Roslyn Analyzers](https://docs.microsoft.com/en-us/visualstudio/extensibility/getting-started-with-roslyn-analyzers?view=vs-2015&redirectedfrom=MSDN)
+  - ["Learn Roslyn Now" by Josh Varty](https://joshvarty.com/learn-roslyn-now/)
+  - [Online syntax tree visualizer](https://sharplab.io/)
+
+### Tests
+Most of the tests are written in two languages: C# and VB.NET. If you aren't an expert in VB.NET (me neither) use [any online converter](https://converter.telerik.com/) to create the VB.NET counterpart from tested C# code example.  
+Tests are ideal for developing features and fixing bugs as it is easy to debug.
+
+### Debugging
+In case you are not sure what is wrong or you see AD0001 error with an exception, it is possible to debug the analysis of problematic Visual Studio solution.  
+> Visual Studio offloads some static analysis work to a separate process. It is a good idea to uncomment [the lines](https://github.com/security-code-scan/security-code-scan/blob/b246418f5d17ba8634ffd70295da636ee3596fc5/SecurityCodeScan/Analyzers/Analyzers.cs#L134-L135) to have a chance to debug the child process.
+
+First, make sure there are no Security Code Scan Visual Studio extensions installed to avoid interference.  
+Right click `SecurityCodeScan.Vsix` project in the solution and choose `Set as StartUp project`.  
+Start debugging in Visual Studio. It will open another instance of Visual Studio with debugger attached.  
+Open the solution with the problematic source.  
+
